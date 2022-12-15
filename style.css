@@ -1,0 +1,35 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+button{
+  font-size: 25px;
+  border: 10px, black;
+  border-radius: 10x, ;
+  color: black;
+  border-color: white;
+  margin: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+  text-align: center;
+  display: block;
+  font-size: 2em;
+  margin: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.container{
+  text-align: center;
+  font: arial; 
+}
+.container{
+  margin-top: 20px ;
+  padding: auto;
+  text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Black and Red</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  <script src="script.js"></script>
+<body onload = "initialize();">
+
+  <div class = "container">
+    <h2 id = "output"></h2>
+    <h3 id = "computer"></h3>
+  </div>
+
+    
+ <div class ="container">
+    <button onclick= "rollDice()">Roll a Die and Increment!</button>
+    <br>
+    <button onclick= "playerAddRedRemoveBlack()">Add reds and remove blacks from opponent</button>
+    <br>
+    <button onclick= "playerAddBlackRemoveRed()">Add blacks and remove reds from opponent</button>
+    <br>
+    <button onclick= "playerRemoveBlackAddRed()">Remove from blacks and add to opponents reds</button>
+    <br>
+    <button onclick= "playerRemoveRedAddBlack()">Remove from reds and add to opponents blacks</button>
+    <br>
+    <button onclick= "reset()">Reset the Game!</button>
+ </div>  
+
+  <div class= "temp">
+    <h3 id = "log"></h3>
+  </div>
+</body>
+
+</html>
+
+
+
