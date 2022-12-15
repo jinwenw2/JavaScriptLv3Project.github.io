@@ -36,14 +36,15 @@ function updateValues(){
 }
 
 function reset(){
-  var pRed = 12;
-  var pBlack = 12;
-  var cRed = 12;
-  var cBlack = 12;
-  var roll = 0;
-  var message = "";
-  var log = "";
-  var cRoll = 0;
+  pRed = 12;
+  pBlack = 12;
+  cRed = 12;
+  cBlack = 12;
+  roll = 0;
+  message = "";
+  log = "";
+  cRoll = 0;
+  updateValues();
 }
 
 function playerAddRedRemoveBlack(){

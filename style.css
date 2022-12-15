@@ -7,10 +7,9 @@ body {
 
 button{
   font-size: 25px;
-  border: 10px, black;
-  border-radius: 10x, ;
+  border-radius: 20x, ;
   color: black;
-  border-color: white;
+  border-color: darkgreen;
   margin: 10px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -18,16 +17,12 @@ button{
 h1{
   text-align: center;
   display: block;
-  font-size: 2em;
+  font-size: 15px;
   margin: 10px;
   font-weight: bold;
   color: black;
 }
 
-.container1{
-  text-align: center;
-  font: arial; 
-}
 .container{
   margin-top: 20px ;
   padding: auto;
