@@ -32,7 +32,7 @@ function initialize(){
 
 function updateValues(){
   	message = "Player Red:" + pRed + " Player Black:" + pBlack + " Computer Red:" + cRed + " Computer Black:" + cBlack + " Dice Value:" + roll;
-  display();
+    display();
 }
 
 function reset(){
@@ -59,9 +59,9 @@ function playerAddRedRemoveBlack(){
     cBlack = cBlack - roll; 
     log += "<p>" + "Player's Turn" + "</p>";
     log += "<br>";
-    log += roll + " Reds added player ";
+    log += roll + " reds added to player ";
     log += "<br>";
-    log += "<p>" + roll + " Blacks removed computer " + "</p>";
+    log += "<p>" + roll + " blacks removed from computer " + "</p>";
     computerTurn();
     updateValues();
     
@@ -72,24 +72,27 @@ function playerAddBlackRemoveRed(){
   if(cRed -roll>-1){
    pBlack = pBlack + roll;
    cRed = cRed - roll; 
-    log += "<p>" + "player turn" + "</p>" ;
-    log += roll + " black added player ";
-    log += "<p>" + roll + " red removed computer " + "</p>" ;
-    computerTurn();
-    updateValues();
+   log += "<p>" + "Player's Turn" + "</p>";
+   log += "<br>";
+   log += roll + " blacks added to player ";
+   log += "<p>" + roll + " reds removed from computer " + "</p>" ;
+   computerTurn();
+   updateValues();
   }
 }
 function playerRemoveRedAddBlack(){
   if(pRed -roll > -1){
     pRed = pRed - roll;
     cBlack = cBlack + roll; 
-    log += "<p>" + "player turn" + "</p>" ;
-    log += roll + " red removed player ";
-    log += "<p>" + roll + " black added computer " + "</p>" ;
+    log += "<p>" + "Player's Turn" + "</p>";
+    log += "<br>";
+    log += roll + " reds removed from player ";
+    log += "<p>" + roll + " blacks added to computer " + "</p>" ;
     computerTurn();
     updateValues();
   }
 }
+
 function playerRemoveBlackAddRed(){
  if(pBlack - roll<1){
    pBlack = pBlack - roll;
@@ -100,9 +103,10 @@ function playerRemoveBlackAddRed(){
   else{
     pBlack = pBlack - roll;
     cRed = cRed + roll;
-    log += "<p>" + "player turn" + "</p>" ;
-    log += roll + " black removed player ";
-    log += "<p>" + roll + " red added computer " + "</p>" ;
+    log += "<p>" + "Player's Turn" + "</p>";
+    log += "<br>";
+    log += roll + " blacks removed from player ";
+    log += "<p>" + roll + " reds added to computer " + "</p>" ;
     computerTurn();
     updateValues();
   }
@@ -118,39 +122,59 @@ function computerAddRedRemoveBlack(){
   else{
     cRed = cRed + roll;
     pBlack = pBlack - roll; 
+    log += "<p>" + "Computer's Turn" + "</p>";
+    log += "<br>";
+    log += roll + " blacks removed from player ";
+    log += "<p>" + roll + " reds added to computer " + "</p>" ;
     updateValues();
   }
 }
+
 function computerAddBlackRemoveRed(){
   if(pRed - roll>-1){
    cBlack = cBlack + roll;
    pRed = pRed - roll; 
     updateValues()
   }
+  log += "<p>" + "Computer's Turn" + "</p>";
+  log += "<br>";
+  log += roll + " reds removed from player ";
+  log += "<p>" + roll + " blacks added to computer " + "</p>" ;
 }
+
 function computerRemoveRedAddBlack(){
   if(cRed - roll > -1){
     cRed = cRed - roll;
     pBlack = pBlack + roll;
+    log += "<p>" + "Computer's Turn" + "</p>";
+    log += "<br>";
+    log += roll + " blacks added to player ";
+    log += "<p>" + roll + " reds removed from computer " + "</p>" ;
     updateValues();
   }
 }
+
 function computerRemoveBlackAddRed(){
-    if(cBlack - roll<1){
-      cBlack = cBlack - roll;
-      pRed = pRed + roll;
-      updateValues();
-      endGame();
+  if(cBlack - roll<1){
+    cBlack = cBlack - roll;
+    pRed = pRed + roll;
+    updateValues();
+    endGame();
   }
   else{
     cBlack = cBlack - roll;
     pRed = pRed + roll; 
+    log += "<p>" + "Computer's Turn" + "</p>";
+    log += "<br>";
+    log += roll + " reds added to player ";
+    log += "<br>";
+    log += "<p>" + roll + " blacks removed from computer " + "</p>";
     updateValues();
   }
 }
 
 function rollDice(){
-   if(pBlack -roll<1){
+  if(pBlack -roll<1){
      
   }
   else{
